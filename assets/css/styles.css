@@ -1,5 +1,14 @@
+body {
+	background: #666;
+}
+
 blockquote {
 	border: none;
+}
+
+.btn-lg {
+	background: #666;
+	color: white;
 }
 
 .vertical-center {
@@ -10,7 +19,12 @@ blockquote {
   align-items: center;
 }
 
-.row {
+.col-xs-12 {
 	text-align: center;
-	background: #ccc;
+	background: white;
+	color: #666;
+
+	width: 80%;
+	padding: 50px;
+	margin: auto;
 }
