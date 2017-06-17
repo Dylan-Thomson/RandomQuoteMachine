@@ -13,7 +13,7 @@ $("#newQuote").on("click", function() {
 
 function generateQuote() {
 	return {
-		quote: "Fancy new quote that's totall random!",
+		quote: "Fancy new quote that's totally random!",
 		source: "Random Fancy Guy"
 	};
 }
