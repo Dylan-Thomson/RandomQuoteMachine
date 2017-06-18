@@ -1,5 +1,6 @@
 body {
 	background: #333;
+
 }
 
 blockquote {
@@ -37,4 +38,18 @@ blockquote {
 	padding: 50px;
 	margin: auto;
 	border-radius: 25px;
+}
+
+#quote {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 2em;
+}
+
+#author {
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 1.5em;
+}
+
+#newQuote {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
