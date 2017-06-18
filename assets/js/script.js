@@ -6,13 +6,12 @@ $("#newQuote").on("click", function() {
 $("#twitter").on("click", function() {
 	var quote = $("#quote").text();
 	var author = $("#author").text();
-	window.location.href = "http://twitter.com/home?status=" + quote + " - " + author;
+	window.open("https://twitter.com/intent/tweet?text=" + quote + " - " + author, "_blank");
 });
 
 function generateQuote() {
 	var url = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
 	 $.getJSON(url, function(data) {
-    // $("#quote").text(data.quoteText);
     $("#quote").animate({"opacity" : 0}, 500, function() {
     	$("#quote").text(data.quoteText).animate({"opacity" : 1}, 500);
     });
@@ -45,7 +44,6 @@ function changeColor() {
 	var color;
 	var currentColor = $("body").css("backgroundColor");
 	color = colors[getRandomIntInclusive(0, colors.length-1)];
-	console.log(color, currentColor);
 
 	while(color === currentColor) {
 		color = colors[getRandomIntInclusive(0, colors.length-1)];
