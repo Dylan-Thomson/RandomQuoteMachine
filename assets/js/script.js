@@ -10,7 +10,7 @@ $("#twitter").on("click", function() {
 });
 
 function generateQuote() {
-	var url = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
+	var url = "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
 	 $.getJSON(url, function(data) {
     $("#quote").animate({"opacity" : 0}, 500, function() {
     	$("#quote").text(data.quoteText).animate({"opacity" : 1}, 500);
