@@ -12,12 +12,19 @@ $("#twitter").on("click", function() {
 function generateQuote() {
 	var url = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
 	 $.getJSON(url, function(data) {
-    $("#quote").text(data.quoteText);
+    // $("#quote").text(data.quoteText);
+    $("#quote").animate({"opacity" : 0}, 500, function() {
+    	$("#quote").text(data.quoteText).animate({"opacity" : 1}, 500);
+    });
     if(data.quoteAuthor.length > 0) {
-    	$("#author").text(data.quoteAuthor);
+    	$("#author").animate({"opacity" : 0}, 500, function() {
+    		$("#author").text(data.quoteAuthor).animate({"opacity" : 1}, 500);
+    	});
     }
     else {
-    	$("#author").text("Unknown");
+    	$("#author").animate({"opacity" : 0}, 500, function() {
+    		$("#author").text("Unknown").animate({"opacity" : 1}, 500);
+    	});
     }
   });
 }
