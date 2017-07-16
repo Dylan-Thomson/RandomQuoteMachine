@@ -53,9 +53,9 @@ blockquote {
 	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
 	#content {
-		padding: 10px;
+		padding: 1em;
 		border-radius: 0px;
 	}
 
