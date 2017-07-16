@@ -6,6 +6,7 @@ $("#newQuote").on("click", function() {
 $("#twitter").on("click", function() {
 	var quote = $("#quote").text();
 	var author = $("#author").text();
+	quote = quote.replace(/;/g, "%3B");
 	window.open("https://twitter.com/intent/tweet?text=" + quote + " - " + author, "_blank");
 });
 
